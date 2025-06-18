@@ -1,23 +1,39 @@
 import React from "react";
 
+// Import background and card images
+import talkBg from "../assets/talk.jpg";
+import micBg from "../assets/mic.jpg";
+
+// Featured Talks images
+import yaleImg from "../assets/yale.jpg";
+import santiagoImg from "../assets/santiago.jpg";
+import georgetownImg from "../assets/Georgetown.jpg";
+
+// Media Links images
+import failImg from "../assets/fail.png";
+import deutscheImg from "../assets/deutsche.png";
+import ghostImg from "../assets/ghost.png";
+import sourImg from "../assets/sour.png";
+import invisibleImg from "../assets/invisible.png";
+
 const featuredTalks = [
   {
     title: "Yale University",
     location: "New Haven, USA",
     date: "March 2024",
-    image: "yale.jpg"
+    image: yaleImg
   },
   {
     title: "AI, Labor & Democracy – Santiago",
     location: "Chile NFL Festival",
     date: "September 2024",
-    image: "santiago.jpg"
+    image: santiagoImg
   },
   {
     title: "Georgetown University",
     location: "Washington D.C.",
     date: "January 2025",
-    image: "Georgetown.jpg"
+    image: georgetownImg
   }
 ];
 
@@ -59,40 +75,43 @@ const mediaLinks = [
     title: "Machines That Fail Us",
     source: "Podcast · Univ. of St. Gallen",
     url: "https://www.unisg.ch/en/newsroom/podcastdetail/news/machines-that-fail-us-7-the-hidden-human-labor-behind-ai-systems/",
-    image: "fail.png"
+    image: failImg
   },
   {
     title: "DW News Africa",
     source: "TV Interview · Deutsche Welle",
     url: "https://www.dw.com/en/dw-news-africa-with-eddy-micah-jr-27-february-2025/video-71777182",
-    image: "deutsche.png"
+    image: deutscheImg
   },
   {
     title: "Ghost Workers",
     source: "Podcast · Generationship",
     url: "https://www.heavybit.com/library/podcasts/generationship/ep-11-ghost-workers-with-adio-dinika-of-dair-institute",
-    image: "ghost.png"
+    image: ghostImg
   },
   {
     title: "The Human Cost of AI",
     source: "Podcast · Sour Studio",
     url: "https://www.sour.studio/podcast/understanding-the-human-cost-of-ai-ft-adio-dinika",
-    image: "sour.png"
+    image: sourImg
   },
   {
     title: "Invisible Labor in AI",
     source: "Video Lecture · Linz Festival",
     url: "https://dorftv.at/video/45118",
-    image: "invisible.png"
+    image: invisibleImg
   }
 ];
 
 export default function Talks() {
   return (
     <div className="bg-white text-gray-900">
-      
+
       {/* Hero Section */}
-      <section className="relative h-[60vh] bg-cover bg-center flex items-center justify-center" style={{ backgroundImage: `url(talk.jpg)` }}>
+      <section
+        className="relative h-[60vh] bg-cover bg-center flex items-center justify-center"
+        style={{ backgroundImage: `url(${talkBg})` }}
+      >
         <div className="bg-black bg-opacity-60 absolute inset-0" />
         <h1 className="z-10 text-white text-4xl md:text-5xl font-bold text-center">Talks & Presentations</h1>
       </section>
@@ -115,7 +134,10 @@ export default function Talks() {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-16 bg-gray-100 bg-cover bg-center" style={{ backgroundImage: "url(mic.jpg)" }}>
+      <section
+        className="py-16 bg-gray-100 bg-cover bg-center"
+        style={{ backgroundImage: `url(${micBg})` }}
+      >
         <div className="max-w-4xl mx-auto px-4 bg-white bg-opacity-90 rounded-2xl shadow-lg p-8">
           <h2 className="text-2xl md:text-3xl font-semibold mb-6">Upcoming & Past Talks</h2>
           <ul className="space-y-4 max-h-[500px] overflow-y-auto">
@@ -131,38 +153,29 @@ export default function Talks() {
       </section>
 
       {/* Media Links */}
-      <section
-  className="py-16 px-4 relative bg-gray-900 text-white"
-  style={{
-    backgroundImage: 'url("/images/podcast-studio-bg.jpg")',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-  }}
->
-  {/* Dark overlay */}
-  <div className="absolute inset-0 bg-black opacity-60"></div>
-
-  <div className="relative max-w-6xl mx-auto z-10">
-    <h2 className="text-2xl md:text-3xl font-semibold mb-10 text-center">Media Appearances & Podcasts</h2>
-    <div className="grid md:grid-cols-3 gap-8">
-      {mediaLinks.map(({ title, source, url, image }, idx) => (
-        <a
-          key={idx}
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group block rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-white text-black"
-        >
-          <img src={image} alt={title} className="h-48 w-full object-cover" />
-          <div className="p-4">
-            <h3 className="font-semibold">{title}</h3>
-            <p className="text-sm text-gray-600">{source}</p>
+      <section className="py-16 px-4 relative bg-gray-900 text-white">
+        <div className="absolute inset-0 bg-black opacity-60"></div>
+        <div className="relative max-w-6xl mx-auto z-10">
+          <h2 className="text-2xl md:text-3xl font-semibold mb-10 text-center">Media Appearances & Podcasts</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {mediaLinks.map(({ title, source, url, image }, idx) => (
+              <a
+                key={idx}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-white text-black"
+              >
+                <img src={image} alt={title} className="h-48 w-full object-cover" />
+                <div className="p-4">
+                  <h3 className="font-semibold">{title}</h3>
+                  <p className="text-sm text-gray-600">{source}</p>
+                </div>
+              </a>
+            ))}
           </div>
-        </a>
-      ))}
-    </div>
-  </div>
-</section>
+        </div>
+      </section>
 
     </div>
   );
