@@ -22,7 +22,7 @@ function NotFound() {
 
 function App() {
   return (
-    <Router basename={import.meta.env.DEV ? "/" : "/adio-site"}>
+    <Router basename="/adet-site">
       <div className="app-container min-h-screen flex flex-col">
         <Header />
         <main className="main-content flex-1">
