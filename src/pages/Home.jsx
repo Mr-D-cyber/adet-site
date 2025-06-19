@@ -192,171 +192,89 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Horizontal Brief Sections */}
-        <div className="mt-16 space-y-6">
-          {/* First Row - 4 cards */}
-          <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-            {/* Selected Articles */}
-            <Link
-              to="/selected-articles"
-              className="group flex flex-col h-full p-5 rounded-xl bg-white hover:bg-emerald-50 border border-emerald-100 hover:border-emerald-200 transition-all duration-300 shadow-sm hover:shadow-md"
-            >
-              <div className="flex-shrink-0 p-3 rounded-lg bg-emerald-500/10 group-hover:bg-emerald-500/20">
-                <svg
-                  className="h-[50px] w-[50px] text-emerald-600"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M19 22H5a3 3 0 0 1-3-3V3a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v12.5l2-2V21a3 3 0 0 1-3 3z" />
-                  <path d="M6 7h8v2H6zm0 4h8v2H6zm0 4h5v2H6z" fill="white" />
-                  <path d="M15 12l4.5 4.5V4a1 1 0 0 0-1-1H6v16h9v-7z" opacity="0.3" />
-                </svg>
-              </div>
-              <div className="mt-4">
-                <h3 className="text-lg font-semibold text-gray-900 group-hover:text-emerald-800">
-                  Selected Articles
-                </h3>
-                <p className="text-gray-600 mt-1.5">
-                  Peer-reviewed publications advancing data worker rights and AI ethics.
-                </p>
-                <div className="mt-3 inline-flex items-center text-emerald-700 group-hover:text-emerald-900 font-semibold">
-                  Explore Articles
-                  <svg
-                    className="w-5 h-5 ml-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-              </div>
-            </Link>
+        {/* Horizontal Brief Sections - Original Layout */}
+<div className="mt-16 space-y-6">
+  <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+    {/* Selected Articles */}
+    <a href="/selected-articles" className="group flex flex-col h-full p-5 rounded-xl bg-white hover:bg-emerald-50 border border-emerald-100 hover:border-emerald-200 transition-all duration-300 shadow-sm hover:shadow-md">
+      <div className="flex-shrink-0 p-3 rounded-lg bg-emerald-500/10 group-hover:bg-emerald-500/20">
+        <svg className="h-[50px] w-[50px] text-emerald-600" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19 22H5a3 3 0 0 1-3-3V3a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v12.5l2-2V21a3 3 0 0 1-3 3z" />
+        </svg>
+      </div>
+      <div className="mt-4">
+        <h3 className="text-lg font-semibold text-gray-900 group-hover:text-emerald-800">Selected Articles</h3>
+        <p className="text-gray-600 mt-1.5">Peer-reviewed publications advancing data worker rights and AI ethics.</p>
+      </div>
+    </a>
 
-            {/* Featured Talks */}
-            <Link
-              to="/selected-talks"
-              className="group flex flex-col h-full p-5 rounded-xl bg-white hover:bg-pink-50 border border-pink-100 hover:border-pink-200 transition-all duration-300 shadow-sm hover:shadow-md"
-            >
-              <div className="flex-shrink-0 p-3 rounded-lg bg-pink-500/10 group-hover:bg-pink-500/20">
-                <svg
-                  className="h-[50px] w-[50px] text-pink-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M4 6v12m4-6h.01"
-                  />
-                </svg>
-              </div>
-              <div className="mt-4">
-                <h3 className="text-lg font-semibold text-gray-900 group-hover:text-pink-800">
-                  Featured Talks
-                </h3>
-                <p className="text-gray-600 mt-1.5">
-                  Videos and interviews on AI labor, justice, and technology futures.
-                </p>
-                <div className="mt-3 inline-flex items-center text-pink-700 group-hover:text-pink-900 font-semibold">
-                  Watch Talks
-                  <svg
-                    className="w-5 h-5 ml-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-              </div>
-            </Link>
+    {/* Public Writing */}
+    <a href="/public-writing" className="group flex flex-col h-full p-5 rounded-xl bg-white hover:bg-sky-50 border border-sky-100 hover:border-sky-200 transition-all duration-300 shadow-sm hover:shadow-md">
+      <div className="flex-shrink-0 p-3 rounded-lg bg-sky-500/10 group-hover:bg-sky-500/20">
+        <svg className="h-[50px] w-[50px] text-sky-600" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M3 5v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z" />
+        </svg>
+      </div>
+      <div className="mt-4">
+        <h3 className="text-lg font-semibold text-gray-900 group-hover:text-sky-800">Public Writing</h3>
+        <p className="text-gray-600 mt-1.5">Essays making complex ideas accessible to broader audiences.</p>
+      </div>
+    </a>
 
-            {/* Fellowships */}
-            <Link
-              to="/fellowships"
-              className="group flex flex-col h-full p-5 rounded-xl bg-white hover:bg-blue-50 border border-blue-100 hover:border-blue-200 transition-all duration-300 shadow-sm hover:shadow-md"
-            >
-              <div className="flex-shrink-0 p-3 rounded-lg bg-blue-500/10 group-hover:bg-blue-500/20">
-                <svg
-                  className="h-[50px] w-[50px] text-blue-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 11c0 3.31-2.69 6-6 6H4v2h2c4.42 0 8-3.58 8-8V7h2v4zM6 6h.01M16 6h.01M12 2h.01"
-                  />
-                </svg>
-              </div>
-              <div className="mt-4">
-                <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-800">
-                  Fellowships
-                </h3>
-                <p className="text-gray-600 mt-1.5">
-                  Opportunities and collaborations shaping AI research and activism.
-                </p>
-                <div className="mt-3 inline-flex items-center text-blue-700 group-hover:text-blue-900 font-semibold">
-                  Learn More
-                  <svg
-                    className="w-5 h-5 ml-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-              </div>
-            </Link>
+    {/* Talks */}
+    <a href="/talks" className="group flex flex-col h-full p-5 rounded-xl bg-white hover:bg-violet-50 border border-violet-100 hover:border-violet-200 transition-all duration-300 shadow-sm hover:shadow-md">
+      <div className="flex-shrink-0 p-3 rounded-lg bg-violet-500/10 group-hover:bg-violet-500/20">
+        <svg className="h-[50px] w-[50px] text-violet-600" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z" />
+        </svg>
+      </div>
+      <div className="mt-4">
+        <h3 className="text-lg font-semibold text-gray-900 group-hover:text-violet-800">Talks</h3>
+        <p className="text-gray-600 mt-1.5">Engagements sharing research findings with global audiences.</p>
+      </div>
+    </a>
 
-            {/* Writing */}
-            <Link
-              to="/writing"
-              className="group flex flex-col h-full p-5 rounded-xl bg-white hover:bg-purple-50 border border-purple-100 hover:border-purple-200 transition-all duration-300 shadow-sm hover:shadow-md"
-            >
-              <div className="flex-shrink-0 p-3 rounded-lg bg-purple-500/10 group-hover:bg-purple-500/20">
-                <svg
-                  className="h-[50px] w-[50px] text-purple-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M7 8h10M7 12h10M7 16h10M4 20h16M4 4h16"
-                  />
-                </svg>
-              </div>
-              <div className="mt-4">
-                <h3 className="text-lg font-semibold text-gray-900 group-hover:text-purple-800">
-                  Writing
-                </h3>
-                <p className="text-gray-600 mt-1.5">
-                  Essays, articles, and creative work on technology and society.
-                </p>
-                <div className="mt-3 inline-flex items-center text-purple-700 group-hover:text-purple-900 font-semibold">
-                  Read Writing
-                  <svg
-                    className="w-5 h-5 ml-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-              </div>
-            </Link>
-          </div>
-        </div>
+    {/* In The Press */}
+    <a href="/in-the-press" className="group flex flex-col h-full p-5 rounded-xl bg-white hover:bg-rose-50 border border-rose-100 hover:border-rose-200 transition-all duration-300 shadow-sm hover:shadow-md">
+      <div className="flex-shrink-0 p-3 rounded-lg bg-rose-500/10 group-hover:bg-rose-500/20">
+        <svg className="h-[50px] w-[50px] text-rose-600" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19 5v14H5V5h14m0-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z" />
+        </svg>
+      </div>
+      <div className="mt-4">
+        <h3 className="text-lg font-semibold text-gray-900 group-hover:text-rose-800">In The Press</h3>
+        <p className="text-gray-600 mt-1.5">Media coverage in leading technology and policy outlets.</p>
+      </div>
+    </a>
+
+    {/* Appointments */}
+    <a href="/appointments" className="group flex flex-col h-full p-5 rounded-xl bg-white hover:bg-indigo-50 border border-indigo-100 hover:border-indigo-200 transition-all duration-300 shadow-sm hover:shadow-md">
+      <div className="flex-shrink-0 p-3 rounded-lg bg-indigo-500/10 group-hover:bg-indigo-500/20">
+        <svg className="h-[50px] w-[50px] text-indigo-600" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L4 7v10l8 5 8-5V7l-8-5z" />
+        </svg>
+      </div>
+      <div className="mt-4">
+        <h3 className="text-lg font-semibold text-gray-900 group-hover:text-indigo-800">Appointments</h3>
+        <p className="text-gray-600 mt-1.5">Current institutional affiliations and research positions.</p>
+      </div>
+    </a>
+
+    {/* Data Workers' Inquiry */}
+    <a href="https://data-workers.org" target="_blank" rel="noopener noreferrer" className="group flex flex-col h-full p-5 rounded-xl bg-white hover:bg-teal-50 border border-teal-100 hover:border-teal-200 transition-all duration-300 shadow-sm hover:shadow-md">
+      <div className="flex-shrink-0 p-3 rounded-lg bg-teal-500/10 group-hover:bg-teal-500/20">
+        <svg className="h-[50px] w-[50px] text-teal-600" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4zm2 2H5V5h14v14z" opacity="0.3" />
+        </svg>
+      </div>
+      <div className="mt-4">
+        <h3 className="text-lg font-semibold text-gray-900 group-hover:text-teal-800">Data Workers' Inquiry</h3>
+        <p className="text-gray-600 mt-1.5">Global collaborative research documenting labor conditions.</p>
+      </div>
+    </a>
+  </div>
+</div>
+
 
         {/* Footer */}
         <footer className="bg-gray-800 text-white py-8 mt-16">

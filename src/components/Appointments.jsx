@@ -11,9 +11,6 @@ import Tum from '../assets/tum.png';
 import Nyu from '../assets/nyu.webp';
 import Weizer from '../assets/weizer.png';
 import Hiis from '../assets/hiis.webp';
-import Prof from '../assets/prof.jpg';
-import Prof2 from '../assets/prof2.jpg';
-import Prof3 from '../assets/prof3.jpg';
 
 const appointments = [
   {
@@ -22,7 +19,6 @@ const appointments = [
     institution: "University of Salerno & University of Padova (Virtual)",
     date: "Mar 28, 2024",
     logo: Salerno,
-    link: "https://unipd.zoom.us/j/88610344396?pwd=…",
   },
   {
     type: "Teaching",
@@ -111,13 +107,18 @@ const icons = {
 export default function Appointments() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-12 space-y-14">
-      {["Teaching", "Fellowships", "Affiliations"].map((type) => (
+      {["Teaching", "Fellowship", "Affiliation"].map((type) => (
         <section
           key={type}
           className={`p-6 rounded-2xl bg-gradient-to-r ${typeStyles[type]} shadow-inner`}
         >
           <h2 className="text-3xl font-bold mb-6 text-gray-800">
-            {icons[type]} {type}
+            {icons[type]}{" "}
+            {type === "Teaching"
+              ? "Teaching"
+              : type === "Fellowship"
+              ? "Fellowships"
+              : "Affiliations"}
           </h2>
           <div className="space-y-6">
             {appointments
