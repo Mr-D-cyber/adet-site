@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-unused-vars
-import { useMemo } from "react";
+import newsTexture from '../assets/news-texture.png';
 
 const pressMentions = [
   {
@@ -43,7 +42,7 @@ export default function InThePress() {
       {/* Newspaper columns with torn edges */}
       <div className="max-w-6xl mx-auto bg-white shadow-xl relative">
         {/* Fake newspaper texture and folds */}
-        <div className="absolute inset-0 bg-[url('news-texture.png')] opacity-10 pointer-events-none"></div>
+        <div className={`absolute inset-0 bg-[url('${newsTexture}')] opacity-10 pointer-events-none`}></div>
         <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-transparent to-amber-200 opacity-30"></div>
         
         {/* Main content */}

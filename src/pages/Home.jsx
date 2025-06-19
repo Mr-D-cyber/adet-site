@@ -98,7 +98,7 @@ export default function Home() {
           <div className="max-w-md mx-auto text-center">
             <h2 className="text-lg font-medium text-gray-600 mb-8">Download My CV</h2>
             <a
-              href="/CV Dinika_AdioD.pdf"
+              href={`${import.meta.env.BASE_URL}CV Dinika_AdioD.pdf`}
               download="Adio-Adet-Dinika-CV.pdf"
               className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gray-800 hover:bg-gray-700 transition-colors duration-300"
             >
@@ -196,7 +196,7 @@ export default function Home() {
 <div className="mt-16 space-y-6">
   <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
     {/* Selected Articles */}
-    <a href="/selected-articles" className="group flex flex-col h-full p-5 rounded-xl bg-white hover:bg-emerald-50 border border-emerald-100 hover:border-emerald-200 transition-all duration-300 shadow-sm hover:shadow-md">
+    <Link to="/selected-articles" className="group flex flex-col h-full p-5 rounded-xl bg-white hover:bg-emerald-50 border border-emerald-100 hover:border-emerald-200 transition-all duration-300 shadow-sm hover:shadow-md">
       <div className="flex-shrink-0 p-3 rounded-lg bg-emerald-500/10 group-hover:bg-emerald-500/20">
         <svg className="h-[50px] w-[50px] text-emerald-600" viewBox="0 0 24 24" fill="currentColor">
           <path d="M19 22H5a3 3 0 0 1-3-3V3a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v12.5l2-2V21a3 3 0 0 1-3 3z" />
@@ -206,10 +206,10 @@ export default function Home() {
         <h3 className="text-lg font-semibold text-gray-900 group-hover:text-emerald-800">Selected Articles</h3>
         <p className="text-gray-600 mt-1.5">Peer-reviewed publications advancing data worker rights and AI ethics.</p>
       </div>
-    </a>
+    </Link>
 
     {/* Public Writing */}
-    <a href="/public-writing" className="group flex flex-col h-full p-5 rounded-xl bg-white hover:bg-sky-50 border border-sky-100 hover:border-sky-200 transition-all duration-300 shadow-sm hover:shadow-md">
+    <Link to="/public-writing" className="group flex flex-col h-full p-5 rounded-xl bg-white hover:bg-sky-50 border border-sky-100 hover:border-sky-200 transition-all duration-300 shadow-sm hover:shadow-md">
       <div className="flex-shrink-0 p-3 rounded-lg bg-sky-500/10 group-hover:bg-sky-500/20">
         <svg className="h-[50px] w-[50px] text-sky-600" viewBox="0 0 24 24" fill="currentColor">
           <path d="M3 5v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z" />
@@ -219,10 +219,10 @@ export default function Home() {
         <h3 className="text-lg font-semibold text-gray-900 group-hover:text-sky-800">Public Writing</h3>
         <p className="text-gray-600 mt-1.5">Essays making complex ideas accessible to broader audiences.</p>
       </div>
-    </a>
+    </Link>
 
     {/* Talks */}
-    <a href="/talks" className="group flex flex-col h-full p-5 rounded-xl bg-white hover:bg-violet-50 border border-violet-100 hover:border-violet-200 transition-all duration-300 shadow-sm hover:shadow-md">
+    <Link to="/talks" className="group flex flex-col h-full p-5 rounded-xl bg-white hover:bg-violet-50 border border-violet-100 hover:border-violet-200 transition-all duration-300 shadow-sm hover:shadow-md">
       <div className="flex-shrink-0 p-3 rounded-lg bg-violet-500/10 group-hover:bg-violet-500/20">
         <svg className="h-[50px] w-[50px] text-violet-600" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z" />
@@ -232,10 +232,10 @@ export default function Home() {
         <h3 className="text-lg font-semibold text-gray-900 group-hover:text-violet-800">Talks</h3>
         <p className="text-gray-600 mt-1.5">Engagements sharing research findings with global audiences.</p>
       </div>
-    </a>
+    </Link>
 
     {/* In The Press */}
-    <a href="/in-the-press" className="group flex flex-col h-full p-5 rounded-xl bg-white hover:bg-rose-50 border border-rose-100 hover:border-rose-200 transition-all duration-300 shadow-sm hover:shadow-md">
+    <Link to="/in-the-press" className="group flex flex-col h-full p-5 rounded-xl bg-white hover:bg-rose-50 border border-rose-100 hover:border-rose-200 transition-all duration-300 shadow-sm hover:shadow-md">
       <div className="flex-shrink-0 p-3 rounded-lg bg-rose-500/10 group-hover:bg-rose-500/20">
         <svg className="h-[50px] w-[50px] text-rose-600" viewBox="0 0 24 24" fill="currentColor">
           <path d="M19 5v14H5V5h14m0-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z" />
@@ -245,10 +245,10 @@ export default function Home() {
         <h3 className="text-lg font-semibold text-gray-900 group-hover:text-rose-800">In The Press</h3>
         <p className="text-gray-600 mt-1.5">Media coverage in leading technology and policy outlets.</p>
       </div>
-    </a>
+    </Link>
 
     {/* Appointments */}
-    <a href="/appointments" className="group flex flex-col h-full p-5 rounded-xl bg-white hover:bg-indigo-50 border border-indigo-100 hover:border-indigo-200 transition-all duration-300 shadow-sm hover:shadow-md">
+    <Link to="/appointments" className="group flex flex-col h-full p-5 rounded-xl bg-white hover:bg-indigo-50 border border-indigo-100 hover:border-indigo-200 transition-all duration-300 shadow-sm hover:shadow-md">
       <div className="flex-shrink-0 p-3 rounded-lg bg-indigo-500/10 group-hover:bg-indigo-500/20">
         <svg className="h-[50px] w-[50px] text-indigo-600" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 2L4 7v10l8 5 8-5V7l-8-5z" />
@@ -258,7 +258,7 @@ export default function Home() {
         <h3 className="text-lg font-semibold text-gray-900 group-hover:text-indigo-800">Appointments</h3>
         <p className="text-gray-600 mt-1.5">Current institutional affiliations and research positions.</p>
       </div>
-    </a>
+    </Link>
 
     {/* Data Workers' Inquiry */}
     <a href="https://data-workers.org" target="_blank" rel="noopener noreferrer" className="group flex flex-col h-full p-5 rounded-xl bg-white hover:bg-teal-50 border border-teal-100 hover:border-teal-200 transition-all duration-300 shadow-sm hover:shadow-md">
