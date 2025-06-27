@@ -9,6 +9,7 @@ import PublicWriting from './components/PublicWriting';
 import Talks from './components/Talks';
 import InThePress from "./components/InThePress";
 import Appointments from "./components/Appointments";
+import ScrollToTop from './components/ScrollToTop';
 
 // Optional: Simple 404 component
 function NotFound() {
@@ -23,6 +24,7 @@ function NotFound() {
 function App() {
   return (
     <Router basename="/adet-site">
+      <ScrollToTop />
       <div className="app-container min-h-screen flex flex-col">
         <Header />
         <main className="main-content flex-1">
