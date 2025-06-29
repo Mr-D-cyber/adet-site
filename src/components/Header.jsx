@@ -8,7 +8,7 @@ const Header = () => {
     <header className="bg-gray-800 text-white shadow-md fixed w-full z-50 top-0">
       <div className="w-full max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Mobile-only Logo */}
-        <div className="text-lg font-semibold md:hidden">A.T. Dinika</div>
+        <div className="text-lg font-semibold md:hidden">Dr A.T. Dinika</div>
 
         {/* Desktop Nav Centered */}
         <nav className="hidden md:flex justify-center w-full space-x-6">

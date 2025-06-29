@@ -3,7 +3,6 @@ import { ArrowUpIcon } from "@heroicons/react/24/solid";
 import { useEffect, useState } from "react";
 
 import prof from "../assets/prof.jpg";
-import prof2 from "../assets/prof2.jpg";
 import prof3 from "../assets/prof3.jpg";
 
 export default function Home() {
@@ -32,63 +31,40 @@ export default function Home() {
               <div className="rounded-xl overflow-hidden shadow-xl h-[400px]">
                 <img src={prof} alt="Adio Dinika portrait" className="w-full h-full object-cover" />
               </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="rounded-xl overflow-hidden shadow-lg h-48">
-                  <img src={prof2} alt="Adio speaking at event" className="w-full h-full object-cover" />
-                </div>
-                <div className="rounded-xl overflow-hidden shadow-lg h-48">
-                  <img src={prof3} alt="Adio conducting research" className="w-full h-full object-cover" />
-                </div>
+              <div className="rounded-xl overflow-hidden shadow-xl h-[400px]">
+                <img src={prof3} alt="Adio conducting research" className="w-full h-full object-cover" />
               </div>
+
             </div>
 
             {/* Text Column */}
             <div className="w-full lg:w-3/5">
-              <h1 className="text-4xl font-bold mb-6 text-gray-800">Adio-Adet Dinika</h1>
+              <h1 className="text-4xl font-bold mb-6 text-gray-800">Dr Adio-Adet Dinika</h1>
               <div className="prose prose-lg text-gray-700 max-w-none">
-                <p className="mb-4">
-                  I'm a Political scientist, storyteller, and AI researcher tracing the hidden labour and
-                  power structures behind today's machine learning systems. My work dives deep into
-                  the data supply chains that make AI possible; from annotation to moderation,
-                  centering the workers whose hands and minds are too often erased (intentionally so)
-                  by systems that would have us believe AI is magic, conjured through tweaks and
-                  keystrokes by "geniuses" in Silicon Valley.
-                </p>
-                <p className="mb-4">
-                  Once upon a time, faced with unemployment and a Master's degree in hand — I
-                  turned to online platforms. I wrote for a pittance that sometimes never came, raced
-                  against ticking clocks and ever-shifting metrics, and felt the sting of trying to outbid
-                  the next desperate worker by bidding lower, cheaper, faster; a race to the bottom I
-                  never consented to join. That experience didn't break me — it politicized me. It's the
-                  reason I do what I do today.
-                </p>
-                <p className="mb-4">
-                  Since 2020, I've worked alongside data workers across Africa, Latin America, and
-                  Europe, not as extractive subjects, but as co-thinkers, co-strugglers, and co-
-                  dreamers. Together, we've built spaces for reflection, refusal, and radical
-                  imagination, inquiry not just as method, but as movement.
-                </p>
-                <p className="mb-4">
-                  I am a researcher at the Distributed AI Research Institute (DAIR), where I also edit
-                  the Possible Futures series; a space where theory meets the lived experience of
-                  technological harm and hope. I co-lead the Data Workers' Inquiry, and I'm also an
-                  affiliated researcher at the Weizenbaum-Institut, and an advisory member The Lab
-                  "Platform Governance, Media and Technology" of ZeMKI at the University of
-                  Bremen, and teach part-time at Constructor University.
-                </p>
-                <p className="mb-4">
-                  My writing appears in Noema Magazine, Africa in Fact, and academic journals, and
-                  I've shared this work at Yale, Cambridge, Georgetown, and other global forums
-                  where the future is debated and shaped. I'm equally fluent in footnotes and feeling,
-                  in critique and cadence. Give me a mic or a blank page — I'll bring the fire. I'm
-                  always open to collaborations, features, and conversations that matter.
-                </p>
-                <p className="mb-4">
-                  And when the academic prose sleeps, the fiction stirs. I'm writing the next literary
-                  thriller — one foot in theory, the other in the fire of story.
-                </p>
-                <p className="mb-4">My pronouns are he/him.</p>
-              </div>
+  
+            <p className="mb-4">
+    I'm a digital labour and AI ethics researcher, storyteller, and political scientist investigating the power structures behind today's technological systems. My work centers two critical areas: platform workers navigating gig economy exploitation, and data workers powering AI systems whose labor is systematically erased by narratives of algorithmic magic.
+  </p>
+  <p className="mb-4">
+    My research isn't abstract. Faced with unemployment after graduate school, I turned to online platforms myself, writing for pennies while racing against algorithms and underbidding desperate competitors in a race to the bottom I never chose to join. That experience didn't break me, it politicized me.
+  </p>
+  <p className="mb-4">
+    Since 2020, I've worked alongside platform workers across Africa and data workers across Africa, Latin America, and Europe, not as research subjects but as collaborators building spaces for reflection, refusal, and radical imagination.
+  </p>
+  <p className="mb-4">
+    I'm a researcher at the Distributed AI Research Institute (DAIR), where I edit the Possible Futures series, and co-lead the Data Workers' Inquiry. I'm an affiliated researcher with the Weizenbaum-Institut and an advisory member of The Lab "Platform Governance, Media and Technology" at ZeMKI, University of Bremen, while teaching at Constructor University.
+  </p>
+  <p className="mb-4">
+    My writing appears in Noema Magazine, Africa in Fact, and academic journals. I've presented this work at Yale, Cambridge, Georgetown, and other forums where the future gets debated and shaped.
+  </p>
+  <p className="mb-4">
+    I'm always open to collaborations and conversations that matter. 
+  </p>
+  <p className="mb-4">
+    My pronouns are he/him.
+  </p>
+</div>
+
             </div>
           </div>
         </section>
